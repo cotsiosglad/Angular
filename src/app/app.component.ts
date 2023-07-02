@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
+import { HomeModule } from './pages/Home/home.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [
+  imports: [HomeModule,
     HomeComponent,
   ],
+  
   template: `
   <main>
     <header class="brand-name">
@@ -17,7 +19,11 @@ import { HomeComponent } from './home/home.component';
     </section>
   </main>
 `,
-  styleUrls: ['./app.component.css'],
+  // templateUrl: '../index.html',
+  // templateUrl: 'pages\\Home\\home.component.html',
+  styleUrls: ['./app.component.css','./pages/Home/home.component.css',
+
+],
 })
 export class AppComponent {
   title = 'default';
